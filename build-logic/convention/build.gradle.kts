@@ -20,7 +20,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "com.mason.build.config.buildlogic"
+group = "com.mason.logic.config.buildlogic"
 
 // Configure the build-logic plugins to target JDK 17
 // This matches the JDK used to build the project, and is not related to what is running on device.

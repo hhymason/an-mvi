@@ -15,8 +15,8 @@
  */
 
 import com.android.build.gradle.LibraryExtension
-import com.mason.build.config.configureFlavors
-import com.mason.build.config.configureKotlinAndroid
+import com.mason.logic.config.configureFlavors
+import com.mason.logic.config.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -30,6 +30,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
                 apply("com.android.library")
                 apply("org.jetbrains.kotlin.android")
                 apply("androidx.navigation.safeargs.kotlin")
+                apply("maven-publish")
             }
 
             extensions.configure<LibraryExtension> {

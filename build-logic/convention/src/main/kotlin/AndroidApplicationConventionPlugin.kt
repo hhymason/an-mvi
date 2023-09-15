@@ -15,8 +15,8 @@
  */
 
 import com.android.build.api.dsl.ApplicationExtension
-import com.mason.build.config.configureApplication
-import com.mason.build.config.configureKotlinAndroid
+import com.mason.logic.config.configureApplication
+import com.mason.logic.config.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
