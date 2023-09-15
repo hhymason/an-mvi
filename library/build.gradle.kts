@@ -7,6 +7,19 @@ plugins {
 android {
     namespace = Apps.LIB_ID
 
+    publishing {
+        multipleVariants {
+            withSourcesJar()
+            withJavadocJar()
+            allVariants()
+        }
+    }
+    sourceSets {
+        getByName("main") {
+            // 主要代码目录
+            java.srcDir("src/main/kotlin")
+        }
+    }
 }
 dependencies {
     implementation(libs.androidx.appcompat)
@@ -18,6 +31,7 @@ dependencies {
     implementation(libs.kotlin.coroutine)
     implementation(libs.kotlin.stdlib)
     implementation(libs.mason.util)
+
 }
 tasks.register<Jar>("androidSourcesJar") {
     from(android.sourceSets["main"].java.srcDirs)
