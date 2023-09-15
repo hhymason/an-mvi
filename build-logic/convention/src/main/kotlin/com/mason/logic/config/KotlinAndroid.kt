@@ -42,8 +42,8 @@ internal fun Project.configureKotlinAndroid(
         compileOptions {
             // Up to Java 11 APIs are available through desugaring
             // https://developer.android.com/studio/write/java11-minimal-support-table
-            sourceCompatibility = JavaVersion.VERSION_11
-            targetCompatibility = JavaVersion.VERSION_11
+            sourceCompatibility = Apps.JAVA_VERSION
+            targetCompatibility = Apps.JAVA_VERSION
             isCoreLibraryDesugaringEnabled = true
         }
         buildFeatures {
@@ -66,8 +66,8 @@ internal fun Project.configureKotlinJvm() {
     extensions.configure<JavaPluginExtension> {
         // Up to Java 11 APIs are available through desugaring
         // https://developer.android.com/studio/write/java11-minimal-support-table
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = Apps.JAVA_VERSION
+        targetCompatibility = Apps.JAVA_VERSION
     }
 
     configureKotlin()
@@ -81,7 +81,7 @@ private fun Project.configureKotlin() {
     tasks.withType<KotlinCompile>().configureEach {
         kotlinOptions {
             // Set JVM target to 11
-            jvmTarget = JavaVersion.VERSION_11.toString()
+            jvmTarget = Apps.JAVA_VERSION.toString()
             // Treat all Kotlin warnings as errors (disabled by default)
             // Override by setting warningsAsErrors=true in your ~/.gradle/gradle.properties
             val warningsAsErrors: String? by project

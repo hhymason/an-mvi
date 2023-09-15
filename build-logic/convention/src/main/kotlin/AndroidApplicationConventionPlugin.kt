@@ -27,13 +27,10 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
             with(pluginManager) {
                 apply("com.android.application")
                 apply("org.jetbrains.kotlin.android")
-                apply("androidx.navigation.safeargs.kotlin")
             }
-
             extensions.configure<ApplicationExtension> {
                 configureApplication(this)
                 configureKotlinAndroid(this)
-                defaultConfig.targetSdk = 34
             }
         }
     }

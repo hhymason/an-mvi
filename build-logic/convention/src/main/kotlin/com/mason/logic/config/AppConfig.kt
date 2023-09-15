@@ -1,5 +1,7 @@
 package com.mason.logic.config
 
+import org.gradle.api.JavaVersion
+
 object Apps {
     /** 主版本号. */
     const val MAJOR = 1
@@ -29,7 +31,9 @@ object Apps {
     /** 版本号由版本名映射，主版本号 * 10000 + 子版本号 * 100 + 修正版本号，例如 1.2.10 -> 10210. */
     const val VERSION_CODE = MAJOR * 10000 + MINOR * 100 + PATCH
 
-    const val GROUP_ID = "com.github.mason"
+    const val GROUP_ID = "com.github.hhymason"
 
     const val ARTIFACT_ID = "an-mvi"
+
+    val JAVA_VERSION = JavaVersion.VERSION_17
 }

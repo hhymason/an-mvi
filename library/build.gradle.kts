@@ -45,6 +45,7 @@ afterEvaluate {
                 groupId = Apps.GROUP_ID
                 artifactId = Apps.ARTIFACT_ID
 
+                artifact(tasks["bundleReleaseAar"])
                 artifact(tasks["androidSourcesJar"])
             }
             // Creates a Maven publication called “snapshot”.
@@ -54,6 +55,7 @@ afterEvaluate {
                 artifactId = Apps.ARTIFACT_ID
                 version = "${Apps.VERSION_NAME}-SNAPSHOT"
 
+                artifact(tasks["bundleReleaseAar"])
                 artifact(tasks["androidSourcesJar"])
             }
         }
