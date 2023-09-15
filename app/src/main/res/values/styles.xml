@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="LoadingDialog" parent="@android:style/Theme.Dialog">
+        <!--去掉Dialog的windowFrame框-->
+        <item name="android:windowFrame">@null</item>
+        <!--浮在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--非半透明-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--去掉title-->
+        <item name="android:windowNoTitle">true</item>
+        <!--dialog的背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+</resources>
